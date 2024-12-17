@@ -57,6 +57,7 @@
     "webpack-dev-server": "^5.1.0"
   },
   "dependencies": {
-    "react-calendar": "^5.1.0"
+    "react-calendar": "^5.1.0",
+    "redux": "^5.0.1"
   }
 }
