@@ -8,6 +8,7 @@ describe("chatReducer", () => {
       type: ACTIONS_TYPES.FETCH_MESSAGES_SUCCESS,
       payload: [{ id: "1", text: "Hello", senderId: "user1" }],
     };
+
     const newState = chatReducer(initialState, action);
     expect(newState.messages).toEqual(action.payload);
   });

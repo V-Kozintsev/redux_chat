@@ -1,11 +1,9 @@
 import { ACTIONS_TYPES } from "./actions";
 import { Message } from "./types";
 import { initialState } from "./initialState";
+import { Action } from "./actions";
 
-export function chatReducer(
-  state = initialState,
-  action: { type: string; payload: string },
-) {
+export function chatReducer(state = initialState, action: Action) {
   switch (action.type) {
     case ACTIONS_TYPES.FETCH_MESSAGES_REQUEST:
       return { ...state, loading: true, error: null };
@@ -44,7 +42,10 @@ export function chatReducer(
       return { ...state, loading: false, error: action.payload };
 
     case ACTIONS_TYPES.SEARCH_MESSAGES: {
-      const query = action.payload.toLowerCase();
+      /* const query = action.payload.toLowerCase(); */
+      const query = action.payload
+        .map((message) => message.text.toLowerCase())
+        .join(" ");
       const searchedMessages = state.messages.filter((message: Message) =>
         message.text.toLowerCase().includes(query),
       );

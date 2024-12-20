@@ -1,5 +1,11 @@
 // actions.ts
 import { Message, User } from "./types";
+interface FetchMessagesSuccessAction {
+  type: typeof ACTIONS_TYPES.FETCH_MESSAGES_SUCCESS;
+  payload: Message[]; // Изменяем на массив сообщений
+}
+
+export type Action = FetchMessagesSuccessAction; // Объедините все действия в один тип
 
 export const ACTIONS_TYPES = {
   FETCH_MESSAGES_REQUEST: "FETCH_MESSAGES_REQUEST",
