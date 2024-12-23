@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1200px; /* Измените на нужное вам значение */
+  width: 100%; /* Занять 100% доступного пространства */
+  background-color: rgb(99, 215, 235);
+  margin: 0 auto;
+  padding: 20px; /* Добавление отступов вокруг содержимого */
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Добавьте отступ снизу для разделения элементов */
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Увеличить ширину формы */
+  max-width: 300px; /* Ограничьте максимальную ширину */
+  margin: 0 auto; /* Центрировать форму */
+}
+form > input,
+form > button {
+  /* Убедитесь, что стиль применяется к элементам внутри формы */
+  margin: 10px 0; /* Добавьте отступы между элементами */
+  padding: 10px; /* Добавьте внутренние отступы для удобства */
+  font-size: 16px; /* Увеличьте размер шрифта для лучшей читаемости */
+}

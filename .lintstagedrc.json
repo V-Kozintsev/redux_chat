@@ -1,0 +1,6 @@
+{
+  "*.js": "npx eslint --fix",
+  "*.ts": "npx eslint --fix",
+  "*.tsx": "npx eslint --fix",
+  "*.{html,css,js,yml,ts,tsx}": "prettier --write"
+}
